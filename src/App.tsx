@@ -6,6 +6,7 @@ import { Footer } from './components/layout/Footer';
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage'));
 const ProjectsPage = React.lazy(() => import('./pages/ProjectsPage'));
+const EducationPage = React.lazy(() => import('./pages/EducationPage'));
 const SkillsPage = React.lazy(() => import('./pages/SkillsPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 
@@ -35,6 +36,7 @@ export default function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/certifications" element={<ProjectsPage />} />
               <Route path="/projects" element={<Navigate to="/certifications" replace />} />
+              <Route path="/education" element={<EducationPage />} />
               <Route path="/skills" element={<SkillsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />

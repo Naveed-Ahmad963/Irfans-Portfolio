@@ -26,7 +26,7 @@ export function Footer() {
               Muhammad Irfan
             </div>
             <p style={{ fontSize: 13, color: 'var(--color-text-muted)', fontFamily: "'Inter', sans-serif" }}>
-              HSE / Safety Officer
+              HSE Professional
             </p>
           </div>
 

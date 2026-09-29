@@ -10,7 +10,7 @@ export default function HomePage() {
     { label: "IOSH", color: "#2563EB" },
     { label: "OSHA", color: "#B45309" },
     { label: "ISO 45001", color: "#0F766E" },
-    { label: "HTRA / JSA", color: "#DC2626" },
+    { label: "HIRA / JSA", color: "#DC2626" },
     { label: "PTW", color: "#0EA5E9" },
   ];
 
@@ -34,7 +34,7 @@ export default function HomePage() {
       color: "#2563EB",
     },
     {
-      value: "Cut & Fill",
+      value: "Earthworks & OHTL",
       label: "Construction Focus",
       icon: icons.hardhat,
       color: "#B45309",
@@ -47,6 +47,7 @@ export default function HomePage() {
     { label: "Incident Investigation & Reporting", done: true },
     { label: "Toolbox Talks & Safety Briefings", done: true },
     { label: "PPE & Emergency Response", done: true },
+    { label: "Plant & Equipment Machinery Inspection at Site", done: true },
   ];
 
   return (
@@ -171,7 +172,7 @@ export default function HomePage() {
                 letterSpacing: "0.01em",
               }}
             >
-              HSE / Safety Officer
+              HSE Professional
               <br />
               <span style={{ color: "#0F766E" }}>
                 Building Safer Sites, One Inspection at a Time
@@ -187,8 +188,8 @@ export default function HomePage() {
                 marginBottom: 36,
               }}
             >
-              HSE professional with 3+ years of experience in cut &amp; fill
-              construction projects across the UAE and Pakistan — skilled in
+              HSE professional with 3+ years of experience in earthworks
+              construction and OHTL projects across the UAE and Pakistan — skilled in
               site inspections, hazard control, and HSE compliance on
               high-risk excavation and earthworks activities.
             </p>
@@ -201,6 +202,19 @@ export default function HomePage() {
               >
                 <Icon d={icons.folder} size={16} />
                 View Certifications
+              </Link>
+              <Link
+                to="/education"
+                className="btn-primary"
+                style={{
+                  textDecoration: "none",
+                  background: "rgba(5, 150, 105, 0.1)",
+                  color: "#34D399",
+                  border: "1px solid rgba(5, 150, 105, 0.25)",
+                }}
+              >
+                <Icon d={icons.star} size={16} />
+                Education
               </Link>
               <Link
                 to="/skills"

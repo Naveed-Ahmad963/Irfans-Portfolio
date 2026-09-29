@@ -1,4 +1,4 @@
-# Muhammad Irfan — HSE / Safety Officer Portfolio
+# Muhammad Irfan — HSE Professional Portfolio
 
 A clean, professional personal portfolio showcasing HSE certifications, site safety experience, and skills, with full dark/light theme support.
 

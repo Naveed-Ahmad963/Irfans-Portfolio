@@ -117,17 +117,6 @@ export const projects = [
     verify: "https://theknightsofsafety.com/",
   },
   {
-    title: "Diploma of Associate Engineer (ICT)",
-    description:
-      "Three-year diploma programme in Information & Communication Technology, completed with an \u201cA\u201d grade at the Construction Technology Training Institute, Islamabad.",
-    tech: ["Technical Diploma", "ICT", "Construction Technology"],
-    category: "Education",
-    color: "#059669",
-    issuer: "Punjab Board of Technical Education, Lahore",
-    date: "2023",
-    verify: "https://pbte.punjab.gov.pk/",
-  },
-  {
     title: "Data Analytics & Business Intelligence",
     description:
       "Government-backed digital skills training covering data analytics fundamentals and business intelligence tools, delivered under the DigiSkills programme.",
@@ -153,7 +142,7 @@ export const projects = [
 
 export const skills = {
   "Risk & Compliance": [
-    { name: "Hazard Identification & Risk Assessment (HTRA)", level: 92 },
+    { name: "Hazard Identification & Risk Assessment (HIRA)", level: 92 },
     { name: "Job Safety Analysis (JSA)", level: 90 },
     { name: "Permit to Work (PTW) Management", level: 85 },
     { name: "HSE Compliance Monitoring", level: 90 },
@@ -177,33 +166,65 @@ export const skills = {
   ],
 };
 
-export const timeline = [
+export const additionalSkills = [
+  "MS Office (Word, Excel, PowerPoint)",
+  "CNC",
+  "International Trade Management",
+  "Import/Export Documentation",
+  "Data Analytics & Business Intelligence",
+];
+
+export const timeline: {
+  year: string;
+  title: string;
+  org?: string;
+  desc?: string;
+  bullets?: string[];
+  icon: string;
+  color: string;
+}[] = [
   {
-    year: "Jan 2026 – Present",
-    title: "HSE Inspector",
-    desc: "Masdar Hybrid Project 1 — Conduct daily site inspections to identify hazards and unsafe practices, ensure welfare facilities are available and in good condition, assist in incident reporting and investigation, run toolbox talks and safety briefings, and maintain safety logs and checklists for high-risk activities.",
-    icon: icons.shield,
-    color: "#0F766E",
-  },
-  {
-    year: "May 2025 – 2026",
-    title: "HSE Assistant",
-    desc: "DEWA Project, Dubai UAE — Conducted daily site inspections for cut & fill activities (excavation, equipment movement, soil collapse), assisted the HSE team with permit documentation, and cooperated on PPE usage, barricading, and traffic management on site.",
+    year: "June 2026 – Present",
+    title: "HSE Officer",
+    org: "L&T – Al Wathba Project, Abu Dhabi",
+    bullets: [
+      "Ensure compliance with UAE & Abu Dhabi HSE/OSH standards.",
+      "Conduct site inspections, TBTs, safety inductions, and plant & machinery inspections.",
+      "Monitor PPE, PTW, RA/MS, equipment and site safety.",
+      "Identify defects/unsafe conditions and follow up corrective actions.",
+      "Report incidents/near misses and promote safe work practices.",
+    ],
     icon: icons.hardhat,
     color: "#2563EB",
   },
   {
+    year: "Jan 2026 – Present",
+    title: "HSE Officer",
+    org: "Masdar Hybrid Project 1",
+    desc: "Conduct daily site inspections to identify hazards and unsafe practices, ensure welfare facilities are available and in good condition, assist in incident reporting and investigation, run toolbox talks and safety briefings, and maintain safety logs and checklists for high-risk activities.",
+    icon: icons.shield,
+    color: "#0F766E",
+  },
+  {
     year: "Apr 2023 – Aug 2024",
     title: "Safety Officer",
-    desc: "Zahir & Brothers, KPCIP Lot-4, Peshawar, Pakistan — Risk assessment and hazard identification before work starts, monitored compliance with safety policies and SOPs, conducted regular inspections and audits, and trained workers on safety awareness and emergency procedures.",
+    org: "Zahir & Brothers, KPCIP Lot-4, Peshawar, Pakistan",
+    desc: "Risk assessment and hazard identification before work starts, monitored compliance with safety policies and SOPs, conducted regular inspections and audits, and trained workers on safety awareness and emergency procedures.",
     icon: icons.clipboard,
     color: "#B45309",
   },
+];
+
+export const education = [
   {
-    year: "2023",
     title: "Diploma of Associate Engineer (ICT)",
-    desc: "Graduated with an \u201cA\u201d grade from the Construction Technology Training Institute, Islamabad, under the Punjab Board of Technical Education, Lahore.",
-    icon: icons.star,
-    color: "#7C3AED",
+    institution: "Punjab Board of Technical Education, Lahore",
+    campus: "Construction Technology Training Institute, Islamabad",
+    detail: "Three-year diploma programme in Information & Communication Technology, completed with an \u201cA\u201d grade.",
+    date: "Graduated 2023",
+    grade: "\u201cA\u201d Grade",
+    tags: ["Construction Technology", "Technical Documentation", "Site Systems", "ICT Fundamentals"],
+    color: "#059669",
+    verify: "https://pbte.punjab.gov.pk/",
   },
 ];

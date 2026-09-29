@@ -287,7 +287,7 @@ export default function ContactPage() {
                 </span>
               </div>
               <p style={{ fontSize: 13, color: "var(--color-text-muted-2)", lineHeight: 1.6 }}>
-                Open to full-time HSE / Safety Officer roles and site safety
+                Open to full-time HSE Professional roles and site safety
                 consulting across the UAE and Pakistan.
               </p>
             </div>

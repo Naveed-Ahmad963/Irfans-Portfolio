@@ -49,8 +49,8 @@ export default function AboutPage() {
             marginBottom: 56,
           }}
         >
-          HSE / Safety Officer with 3+ years of hands-on experience across
-          cut &amp; fill construction projects in the UAE and building
+          HSE Professional with 3+ years of hands-on experience across
+          earthworks construction and OHTL projects in the UAE and building
           projects in Pakistan. Skilled in site inspections, hazard control,
           and ensuring full HSE compliance across high-risk construction
           activities.
@@ -80,12 +80,12 @@ export default function AboutPage() {
               {
                 label: "Background",
                 value:
-                  "Diploma-qualified HSE professional with 3+ years' experience across cut & fill construction projects in the UAE and building projects in Pakistan.",
+                  "Diploma-qualified HSE professional with 3+ years' experience across earthworks construction and OHTL projects in the UAE and building projects in Pakistan.",
               },
               {
                 label: "Focus",
                 value:
-                  "Specializes in hazard identification, risk assessment (HTRA/JSA), and full HSE compliance across high-risk excavation and earthworks activities.",
+                  "Specializes in hazard identification, risk assessment (HIRA/JSA), and full HSE compliance across high-risk excavation and earthworks activities.",
               },
               {
                 label: "Approach",
@@ -135,79 +135,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          {/* Education */}
           <div>
-            <div
-              className="glass gradient-border"
-              style={{
-                borderRadius: 20,
-                padding: "32px 28px",
-                marginBottom: 20,
-              }}
-            >
-              <div
-                style={{ display: "flex", alignItems: "flex-start", gap: 16 }}
-              >
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 14,
-                    background: "linear-gradient(135deg,#0F766E,#2563EB)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <Icon d={icons.star} size={22} className="" />
-                </div>
-                <div>
-                  <h4
-                    className="section-heading"
-                    style={{ fontSize: 16, color: "var(--color-text)", marginBottom: 6 }}
-                  >
-                    Punjab Board of Technical Education
-                  </h4>
-                  <p
-                    style={{
-                      fontSize: 13,
-                      color: "#0F766E",
-                      fontWeight: 600,
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      marginBottom: 8,
-                    }}
-                  >
-                    Diploma of Associate Engineer (ICT)
-                  </p>
-                  <p
-                    style={{ fontSize: 12, color: "var(--color-text-muted-2)", marginBottom: 4 }}
-                  >
-                    Graduated: 2023 · &ldquo;A&rdquo; Grade
-                  </p>
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: 8,
-                      marginTop: 14,
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {[
-                      "Construction Technology",
-                      "Technical Documentation",
-                      "Site Systems",
-                      "ICT Fundamentals",
-                    ].map((t) => (
-                      <span key={t} className="tag">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Quick facts */}
             <div
               className="glass"
@@ -221,8 +149,8 @@ export default function AboutPage() {
               </h4>
               {[
                 { label: "Location", value: "Abu Dhabi, UAE" },
-                { label: "Focus", value: "HSE / Safety Officer" },
-                { label: "Current Role", value: "HSE Inspector, Masdar Hybrid" },
+                { label: "Focus", value: "HSE Professional" },
+                { label: "Current Role", value: "HSE Officer, L&T – Al Wathba" },
                 { label: "Languages", value: "English, Urdu, Hindi, Arabic" },
               ].map((f, i) => (
                 <div
@@ -343,9 +271,23 @@ export default function AboutPage() {
                     {item.title}
                   </h4>
                 </div>
-                <p style={{ fontSize: 14, color: "var(--color-text-muted-2)", lineHeight: 1.7 }}>
-                  {item.desc}
-                </p>
+                {item.org && (
+                  <p style={{ fontSize: 13, fontWeight: 600, color: item.color, fontFamily: "'Space Grotesk', sans-serif", marginBottom: 8 }}>
+                    {item.org}
+                  </p>
+                )}
+                {item.desc && (
+                  <p style={{ fontSize: 14, color: "var(--color-text-muted-2)", lineHeight: 1.7 }}>
+                    {item.desc}
+                  </p>
+                )}
+                {item.bullets && (
+                  <ul style={{ margin: 0, paddingLeft: 20, fontSize: 14, color: "var(--color-text-muted-2)", lineHeight: 1.7 }}>
+                    {item.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}

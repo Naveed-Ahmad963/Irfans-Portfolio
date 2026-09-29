@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { icons, projects, skills, timeline, navLinks } from "../data";
+import { icons, projects, skills, timeline, navLinks, additionalSkills } from "../data";
 import { Icon } from "../components/ui/Icon";
 import { GlowOrb } from "../components/ui/GlowOrb";
 import { SectionLabel } from "../components/ui/SectionLabel";
@@ -8,22 +8,36 @@ import { SkillBar } from "../components/ui/SkillBar";
 export default function SkillsPage() {
   const skillTabs = Object.keys(skills);
 
-  const experience = [
+  const experience: {
+    role: string;
+    org: string;
+    period: string;
+    desc?: string;
+    bullets?: string[];
+    tags: string[];
+    color: string;
+  }[] = [
     {
-      role: "HSE Inspector",
+      role: "HSE Officer",
+      org: "L&T – Al Wathba Project, Abu Dhabi",
+      period: "June 2026 – Present",
+      bullets: [
+        "Ensure compliance with UAE & Abu Dhabi HSE/OSH standards.",
+        "Conduct site inspections, TBTs, safety inductions, and plant & machinery inspections.",
+        "Monitor PPE, PTW, RA/MS, equipment and site safety.",
+        "Identify defects/unsafe conditions and follow up corrective actions.",
+        "Report incidents/near misses and promote safe work practices.",
+      ],
+      tags: ["Site Inspections", "PTW", "Plant & Machinery Inspection"],
+      color: "#2563EB",
+    },
+    {
+      role: "HSE Officer",
       org: "Masdar Hybrid Project 1",
       period: "Jan 2026 – Present",
       desc: "Conduct daily site inspections to identify hazards and unsafe practices, ensure welfare facilities are available and in good condition, assist in incident reporting and investigation, run toolbox talks and safety briefings, and maintain safety logs and checklists for high-risk activities.",
       tags: ["Site Inspections", "Incident Reporting", "Toolbox Talks"],
       color: "#0F766E",
-    },
-    {
-      role: "HSE Assistant",
-      org: "DEWA Project — Dubai, UAE",
-      period: "May 2025 – 2026",
-      desc: "Conducted daily site inspections for cut & fill activities (excavation, equipment movement, soil collapse), assisted the HSE team with permit documentation, and cooperated on PPE usage, barricading, and traffic management on site.",
-      tags: ["Cut & Fill Safety", "Permits", "PPE Compliance"],
-      color: "#2563EB",
     },
     {
       role: "Safety Officer",
@@ -141,18 +155,8 @@ export default function SkillsPage() {
             </h3>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
               {[
-                "PPE",
-                "JSA",
-                "HTRA",
-                "Permit to Work",
-                "Toolbox Talks",
-                "LOTOTO",
-                "Confined Space",
-                "Fall Protection",
-                "ISO 45001",
-                "NEBOSH",
-                "OSHA",
-                "IOSH",
+                "Abu Dhabi HSE/OSH Standards – Currently Working",
+                "ISO 45001 – Occupational Health & Safety Management System Awareness Training Completed",
               ].map((t) => (
                 <span
                   key={t}
@@ -181,6 +185,25 @@ export default function SkillsPage() {
                     el.style.background = "var(--color-border-softer)";
                   }}
                 >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="glass"
+            style={{ borderRadius: 20, padding: "32px 28px" }}
+          >
+            <h3
+              className="section-heading"
+              style={{ fontSize: 18, color: "var(--color-text)", marginBottom: 24 }}
+            >
+              Additional Skills
+            </h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {additionalSkills.map((t) => (
+                <span key={t} className="tag">
                   {t}
                 </span>
               ))}
@@ -287,16 +310,33 @@ export default function SkillsPage() {
                   {exp.period}
                 </span>
               </div>
-              <p
-                style={{
-                  fontSize: 14,
-                  color: "var(--color-text-muted-2)",
-                  lineHeight: 1.7,
-                  marginBottom: 16,
-                }}
-              >
-                {exp.desc}
-              </p>
+              {exp.desc && (
+                <p
+                  style={{
+                    fontSize: 14,
+                    color: "var(--color-text-muted-2)",
+                    lineHeight: 1.7,
+                    marginBottom: 16,
+                  }}
+                >
+                  {exp.desc}
+                </p>
+              )}
+              {exp.bullets && (
+                <ul
+                  style={{
+                    margin: "0 0 16px",
+                    paddingLeft: 20,
+                    fontSize: 14,
+                    color: "var(--color-text-muted-2)",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {exp.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              )}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {exp.tags.map((t) => (
                   <span key={t} className="tag">
