@@ -34,9 +34,16 @@ export default function SkillsPage() {
     {
       role: "HSE Officer",
       org: "Masdar Hybrid Project 1",
-      period: "Jan 2026 – Present",
-      desc: "Conduct daily site inspections to identify hazards and unsafe practices, ensure welfare facilities are available and in good condition, assist in incident reporting and investigation, run toolbox talks and safety briefings, and maintain safety logs and checklists for high-risk activities.",
-      tags: ["Site Inspections", "Incident Reporting", "Toolbox Talks"],
+      period: "Jul 2025 – Jun 2026",
+      bullets: [
+        "Supported implementation of the ISO 45001:2018 OH&S management system on site.",
+        "Delivered occupational health and safety awareness training to workers.",
+        "Conducted daily site inspections to identify hazards and unsafe practices.",
+        "Ensured welfare facilities were available and in good condition.",
+        "Assisted in incident reporting and investigation; ran toolbox talks and safety briefings.",
+        "Maintained safety logs and checklists for high-risk activities.",
+      ],
+      tags: ["ISO 45001:2018", "OH&S Awareness Training", "Site Inspections", "Toolbox Talks"],
       color: "#0F766E",
     },
     {

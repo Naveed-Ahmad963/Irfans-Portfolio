@@ -95,10 +95,10 @@ export const projects = [
     verify: "https://www.oshas.us/",
   },
   {
-    title: "ISO 45001:2018 — OH&S Management System",
+    title: "ISO 45001:2018 — Occupational Health Safety Management System and Awareness Training",
     description:
-      "Introductory certification on the ISO 45001 occupational health and safety management system standard and its application on active worksites.",
-    tech: ["ISO 45001", "Management Systems", "Compliance"],
+      "Certification covering the ISO 45001:2018 occupational health and safety management system standard and safety awareness training, applied on active worksites.",
+    tech: ["ISO 45001", "Management Systems", "Awareness Training"],
     category: "Certification",
     color: "#7C3AED",
     issuer: "The Knights of Safety Academy",
@@ -198,10 +198,17 @@ export const timeline: {
     color: "#2563EB",
   },
   {
-    year: "Jan 2026 – Present",
+    year: "Jul 2025 – Jun 2026",
     title: "HSE Officer",
     org: "Masdar Hybrid Project 1",
-    desc: "Conduct daily site inspections to identify hazards and unsafe practices, ensure welfare facilities are available and in good condition, assist in incident reporting and investigation, run toolbox talks and safety briefings, and maintain safety logs and checklists for high-risk activities.",
+    bullets: [
+      "Supported implementation of the ISO 45001:2018 OH&S management system on site.",
+      "Delivered occupational health and safety awareness training to workers.",
+      "Conducted daily site inspections to identify hazards and unsafe practices.",
+      "Ensured welfare facilities were available and in good condition.",
+      "Assisted in incident reporting and investigation; ran toolbox talks and safety briefings.",
+      "Maintained safety logs and checklists for high-risk activities.",
+    ],
     icon: icons.shield,
     color: "#0F766E",
   },
